@@ -97,56 +97,235 @@
 
 // type gurds
 
-type Parems=string | number
+// type Parems=string | number
 
-const add=(x:Parems , y:Parems)=>{
+// const add=(x:Parems , y:Parems)=>{
 
-    if(typeof x=== 'number' && typeof y==='number'){
+//     if(typeof x=== 'number' && typeof y==='number'){
 
-        console.log(x+y)
-    }else if(typeof x === 'string' && typeof y === 'string'){
-        console.log(`${x} ${y}`)
-    }
+//         console.log(x+y)
+//     }else if(typeof x === 'string' && typeof y === 'string'){
+//         console.log(`${x} ${y}`)
+//     }
 
-}
+// }
 
 
-add('xxx', 'yy');
-add(20,30)
+// add('xxx', 'yy');
+// add(20,30)
 
 
 //in garud 
 
-type NormalUser={
-    name:string;
-}
+// type NormalUser={
+//     name:string;
+// }
 
-type AdminUser={
-    name:string;
-    role:'admin'
-}
+// type AdminUser={
+//     name:string;
+//     role:'admin'
+// }
 
-const getUser=(user:NormalUser | AdminUser)=>{
+// const getUser=(user:NormalUser | AdminUser)=>{
 
 
-    if('role' in user){
-        console.log('user Admin')
+//     if('role' in user){
+//         console.log('user Admin')
+//     }
+
+//     console.log('user')
+
+
+// }
+
+// const normalUser:NormalUser={
+//     name:'animes'
+// }
+
+// const adminUser:AdminUser={
+//     name:'admin user',
+//     role:'admin'
+// }
+
+// getUser(adminUser)
+
+
+//instanceof guard
+
+// class Animal{
+//     name:string;species:string;
+
+//     constructor(name:string, species:string){
+//         this.name=name;
+//         this.species=species;
+
+//     }
+
+//     makeSound(){
+//         console.log(`i a makin sound `)
+//     }
+// }
+
+
+
+// class Dog extends Animal{
+//     constructor(name:string,species:string){
+//         super(name, species)
+//     }
+//     nakeBark(){
+//         console.log('iam barking')
+//     }
+
+// }
+
+// class Cat extends Animal{
+//     constructor(name:string,species:string){
+//         super(name, species)
+//     }
+//     nakeBark(){
+//         console.log('iam  mao')
+//     }
+
+// }
+
+// const getAnimal=(animal:Animal)=>{
+//     if( animal instanceof Dog){
+//         animal.nakeBark();
+//     }else if(animal instanceof Cat){
+//         animal.nakeBark()
+//     }
+// }
+
+
+// const dog=new Dog('Bog bahi', 'dog')
+// const cat=new Cat('cat bhai', 'cat')
+
+
+// getAnimal(dog)    
+
+
+
+//access modifiers
+
+// class BankAcount{
+//     readonly id:number;
+//     name:string;
+//     protected  _blance:number;
+
+
+//     constructor(id:number, name:string, blance:number){
+
+//         this.id=id;
+//         this.name=name;
+//         this._blance=blance;
+//     }
+
+//     addBlance(newBlance:number){
+//         this._blance = this._blance +newBlance;
+//         return(`blance:${this._blance}`)
+//     }
+// }
+
+
+// class StudentAcount extends BankAcount{
+
+//     constructor(id:number,name:string,_blance:number){
+//         super(id,name,_blance)
+        
+//     }
+
+// }
+
+// const goribManus=new BankAcount(12540, 'animes barman', 52200);
+
+// const myBlance=goribManus.addBlance(30000)
+
+// console.log(myBlance)
+
+//getter and setter
+
+
+// class BankAcount{
+//     readonly id:number;
+//     name:string;
+//     protected  _blance:number;
+
+
+//     constructor(id:number, name:string, blance:number){
+
+//         this.id=id;
+//         this.name=name;
+//         this._blance=blance;
+//     }
+
+//     addBlance(newBlance:number){
+//         this._blance = this._blance +newBlance;
+//         return(`blance:${this._blance}`)
+//     }
+
+//     set depositBlance(amount:number){
+//          this._blance= this._blance + amount
+
+//     }
+
+//     get blance(){
+//         return this._blance;
+//     }
+
+    
+// }
+
+
+// class StudentAcount extends BankAcount{
+
+//     constructor(id:number,name:string,_blance:number){
+//         super(id,name,_blance)
+        
+//     }
+
+// }
+
+// const goribManus=new BankAcount(12540, 'animes barman', 52200);
+
+// const myBlance=goribManus.addBlance(30000)
+
+// const myBlanceGetter=goribManus.blance;
+// const depoitBlance=goribManus.depositBlance=20000;
+
+
+// console.log(depoitBlance)
+
+
+
+
+//statics in opp
+
+
+class Acunter{
+    static count:number=0;
+
+    inCremnet(){
+        return Acunter.count=Acunter.count +1;
     }
 
-    console.log('user')
-
-
+    decreMent(){
+        return Acunter.count =Acunter.count -1;
+    }
 }
 
-const normalUser:NormalUser={
-    name:'animes'
-}
 
-const adminUser:AdminUser={
-    name:'admin user',
-    role:'admin'
-}
+const instant=new Acunter();
 
-getUser(adminUser)
+console.log(instant.inCremnet())
+
+
+const instant2=new Acunter();
+
+console.log(instant2.inCremnet())
+
+
+
+
+
 
 
