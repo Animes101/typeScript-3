@@ -183,14 +183,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //statics in opp
 class Acunter {
     static count = 0;
-    inCremnet() {
+    static inCremnet() {
         return Acunter.count = Acunter.count + 1;
     }
-    decreMent() {
+    static decreMent() {
         return Acunter.count = Acunter.count - 1;
     }
 }
-const instant = new Acunter();
-console.log(instant.inCremnet());
-const instant2 = new Acunter();
-console.log(instant2.inCremnet());
+console.log(Acunter.decreMent());
