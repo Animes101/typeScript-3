@@ -181,13 +181,32 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // const depoitBlance=goribManus.depositBlance=20000;
 // console.log(depoitBlance)
 //statics in opp
-class Acunter {
-    static count = 0;
-    static inCremnet() {
-        return Acunter.count = Acunter.count + 1;
-    }
-    static decreMent() {
-        return Acunter.count = Acunter.count - 1;
+// class Acunter{
+//     static count:number=0;
+//     static inCremnet(){
+//         return Acunter.count=Acunter.count +1;
+//     }
+//     static decreMent(){
+//         return Acunter.count =Acunter.count -1;
+//     }
+// }
+// console.log(Acunter.decreMent())
+//polymorphisom
+class Person {
+    getShleep() {
+        console.log(`iam shleping`);
     }
 }
-console.log(Acunter.decreMent());
+class Student extends Person {
+    getShleep() {
+        console.log('sleeping for student');
+    }
+}
+class Developer extends Person {
+    getShleep() {
+        console.log(`sleeping for developer`);
+    }
+}
+const person = new Person();
+const studentSleep = new Student();
+const developer = new Developer();

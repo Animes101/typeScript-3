@@ -301,27 +301,62 @@
 //statics in opp
 
 
-class Acunter{
-    static count:number=0;
+// class Acunter{
+//     static count:number=0;
 
-    inCremnet(){
-        return Acunter.count=Acunter.count +1;
+//     static inCremnet(){
+//         return Acunter.count=Acunter.count +1;
+//     }
+
+//     static decreMent(){
+//         return Acunter.count =Acunter.count -1;
+//     }
+// }
+
+
+// console.log(Acunter.decreMent())
+
+
+
+
+
+//polymorphisom
+
+
+class Person{
+
+    getShleep(){
+        console.log(`iam shleping`)
     }
+}
 
-    decreMent(){
-        return Acunter.count =Acunter.count -1;
+class Student extends Person{
+
+    getShleep(): void {
+        console.log('sleeping for student')
+    }
+}
+
+class Developer extends Person{
+    getShleep(){
+
+        console.log(`sleeping for developer`)
     }
 }
 
 
-const instant=new Acunter();
+const person=new Person()
+const studentSleep=new Student();
 
-console.log(instant.inCremnet())
+const developer=new Developer()
 
 
-const instant2=new Acunter();
 
-console.log(instant2.inCremnet())
+
+
+
+
+
 
 
 
