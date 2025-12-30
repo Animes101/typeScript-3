@@ -474,26 +474,41 @@
 
 //abstract class
 
-class Veicle2{
-     startEngin(): void {
-        console.log('start the car')
-    }
-    stopEngin(): void {
-        console.log('stop the car')
-    }
+// abstract class Veicle2{
 
-    move(): void {
-        console.log('move the car')
-    }
+
+//     abstract startEngin(): void;
+//    abstract stopEngin(): void ;
+//     abstract move(): void ;
 
    
-}
+// }
 
-const Car2=new Veicle2();
 
-Car2.move();
-Car2.startEngin();
-Car2.startEngin()
+// class ToyataCAr extends Veicle2{
+
+//     startEngin(): void {
+//         console.log('i am startIngin')
+//     }
+//     stopEngin(): void {
+//         console.log('stoping toyota car')
+//     }
+//     move(): void {
+//         console.log('move the car')
+//     }
+
+// }
+
+
+// const CAr4=new ToyataCAr()
+
+// CAr4.move();
+// CAr4.startEngin();
+// CAr4.stopEngin()
+
+
+//
+
 
 
 
