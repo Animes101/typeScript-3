@@ -323,39 +323,177 @@
 //polymorphisom
 
 
-class Person{
+// class Person{
 
-    getShleep(){
-        console.log(`iam shleping`)
+//     getShleep(){
+//         console.log(`iam shleping`)
+//     }
+// }
+
+// class Student extends Person{
+
+//     getShleep(): void {
+//         console.log('sleeping for student')
+//     }
+// }
+
+// class Developer extends Person{
+//     getShleep(){
+
+//         console.log(`sleeping for developer`)
+//     }
+// }
+
+
+
+// const getsleeping=(param:Person)=>{
+
+//     param.getShleep();
+
+// }
+
+
+// const person=new Person()
+// const studentSleep=new Student();
+
+// const developer=new Developer()
+
+// getsleeping(person);
+// getsleeping(studentSleep);
+// getsleeping(developer);
+
+
+
+
+// class Shape{
+//     getArea():number{
+//         return 0
+//     }
+// }
+
+
+// class Circle extends Shape{
+
+//     radius:number;
+//     constructor(radius:number){
+//         super()
+//         this.radius=radius;
+//     }
+
+//     getArea():number{
+
+//         return Math.PI * this.radius * this.radius
+
+
+
+//     }
+
+// }
+
+
+// class Reactangle extends Shape{
+
+//     height:number;
+//     width:number;
+
+//     constructor(height:number, width:number) {
+
+//         super()
+//         this.height=height;
+//         this.width=width;
+        
+//     }
+
+//     getArea(){
+//         return this.height * this.width;
+
+
+//     }
+
+    
+// }
+
+// const GEtShapeArea=(param:Shape)=>{
+
+//     console.log(param.getArea())
+
+// }
+
+// const shape1=new Shape();
+// const shape2=new Circle(20);
+// const shape3=new Reactangle(20,30)
+
+// GEtShapeArea(shape1)
+// GEtShapeArea(shape2)
+// GEtShapeArea(shape3)
+
+
+
+
+//abstraction in opp
+
+
+// interface Vehicle1{
+   
+
+//     startEngin(): void;
+//     stopEngin(): void;
+//     move():void;
+
+
+
+// }
+
+// class Car implements Vehicle1{
+
+//     startEngin(): void {
+//         console.log('start the car')
+//     }
+//     stopEngin(): void {
+//         console.log('stop the car')
+//     }
+
+//     move(): void {
+//         console.log('move the car')
+//     }
+
+
+// }
+
+// const toyotaCAr=new Car();
+
+// toyotaCAr.startEngin();
+// toyotaCAr.stopEngin();
+// toyotaCAr.move();
+
+
+
+
+
+
+
+//abstract class
+
+class Veicle2{
+     startEngin(): void {
+        console.log('start the car')
     }
+    stopEngin(): void {
+        console.log('stop the car')
+    }
+
+    move(): void {
+        console.log('move the car')
+    }
+
+   
 }
 
-class Student extends Person{
+const Car2=new Veicle2();
 
-    getShleep(): void {
-        console.log('sleeping for student')
-    }
-}
-
-class Developer extends Person{
-    getShleep(){
-
-        console.log(`sleeping for developer`)
-    }
-}
-
-
-const person=new Person()
-const studentSleep=new Student();
-
-const developer=new Developer()
-
-
-
-
-
-
-
+Car2.move();
+Car2.startEngin();
+Car2.startEngin()
 
 
 
